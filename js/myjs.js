@@ -7,14 +7,14 @@ fxActivePageShake = function() {
 fxListeCocktails = function() {
     
 // Liste des ingrédients par cocktail
-    var tL = $('#templateListes').html();
-    var tLHtml = Mustache.render(tL, compositions);
-    $('#listeCompositions').append(tLHtml);
+    var tList = $('#templateListes').html();
+    var tListHtml = Mustache.render(tList, compositions);
+    $('#listeCompositions').append(tListHtml);
 
 // Nom du cocktail
-    var tN = $('#templateNom').html();
-    var tNHtml = Mustache.render(tN, cocktails);
-    $('#nomCocktail').append(tLHtml);    
+    var tNoms = $('#templateNom').html();
+    var tNomsHtml = Mustache.render(tNoms, cocktails);
+    $('#nomCocktail').append(tNomsHtml);
 };
 
 fxListeIngredients = function() {
@@ -31,21 +31,22 @@ fxClickZoneDrag = function() {
         // Déclarations
         var isInDropZone = $(this).parent().hasClass("slide-drop");
         var nbDropMax = 3;
-        var nbDrop = $('#dropzone li').length;
+        var nbDrop = $('#dropzone').find('li').length;
+        var temp;
 
         // Si 3 ingrédients cliqués: exit
-        if ((nbDrop >= nbDropMax) && (!isInDropZone)) { 
-            return false;
-        };
+        if ((nbDrop >= nbDropMax) && (!isInDropZone)) {
+            return;
+        }
 
         if (isInDropZone) {
             // Si click dans la zone Drop alors coupe dans la zone ingredients
             temp = $(this).detach();
-            temp.appendTo( "#listeIngredients" );      
+            temp.appendTo( "#listeIngredients" );
         } else {
             // Si click dans la zone ingrédients alors coupe dans la zone drop
             temp = $(this).detach();
-            temp.appendTo( "#dropzone" );       
+            temp.appendTo( "#dropzone" );
         }
     });
 };
@@ -53,7 +54,7 @@ fxClickZoneDrag = function() {
 // Gestion du click sur reload
 fxClickReload = function() {
 $(document).on("click", "#reload", function() {
-    $('#dropzone li').detach().appendTo( "#listeIngredients" );
+    $('#dropzone').find('li').detach().appendTo( "#listeIngredients" );
 
 });
 };
