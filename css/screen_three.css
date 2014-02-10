@@ -1,0 +1,67 @@
+/* line 6, ../sass/screen_three.sass */
+#screen_three figure {
+  position: relative;
+  width: 100%;
+  height: 40%;
+  background-color: hotpink;
+}
+/* line 11, ../sass/screen_three.sass */
+#screen_three figure img {
+  max-height: 100%;
+  max-width: 100%;
+  overflow: hidden;
+}
+/* line 15, ../sass/screen_three.sass */
+#screen_three #fav-button {
+  position: absolute;
+  z-index: 10;
+  right: 20px;
+  bottom: 20px;
+  height: 40px;
+  width: 40px;
+  background-color: yellow;
+}
+
+/* line 24, ../sass/screen_three.sass */
+#back-3-top {
+  position: absolute;
+  top: 40%;
+  left: 0;
+}
+
+/* line 28, ../sass/screen_three.sass */
+#back-3-bottom {
+  width: 90%;
+  margin: 0 5%;
+  padding: 15px;
+  display: block;
+}
+
+/* line 35, ../sass/screen_three.sass */
+#screen_three ul {
+  margin: 0 0 15px 0;
+  padding: 0;
+}
+/* line 38, ../sass/screen_three.sass */
+#screen_three li {
+  margin-left: 15px;
+  font-weight: bold;
+}
+/* line 42, ../sass/screen_three.sass */
+#screen_three .inline-list li {
+  padding: 0 5px;
+  margin: 0;
+  list-style: none;
+  display: inline-block;
+  font-weight: normal;
+}
+/* line 48, ../sass/screen_three.sass */
+#screen_three .inline-list li h2 {
+  margin-top: 0;
+}
+/* line 50, ../sass/screen_three.sass */
+#screen_three article {
+  padding: 5px 20px 20px 20px;
+  margin: 25px;
+  background-color: #f5e3c2;
+}

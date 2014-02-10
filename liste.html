@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Tchika Tchika</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <section id="screen_two">
+<!-- bouton de retour -->
+        <button id="back">
+            <!-- <i class="icon-back"></i> -->Back
+        </button>
+
+        <ul>
+            <li>
+                <article>
+    <!-- titre -->
+                    <h2 id="nomCocktail">
+    <!-- insérer icone favoris -->
+                        <span class="favoris-indication"></span>
+    <!-- /icone favoris -->
+
+                    </h2>
+    <!-- liste ingredients -->
+                    <ul id="listeCompositions" class="inline-list">
+
+                    </ul>
+    <!-- /liste ingrédients -->
+
+    <!-- photo en bas de chaque article -->
+                    <figure>
+                        <!-- <img src="img/..." alt="" class="photo-cocktail-1"> -->
+                    </figure>
+                </article>
+            </li>
+<!-- / FIN DU PREMIER COCKTAIL -->
+        </ul>
+
+<!-- CREATION TEMPLATE -->
+
+<!-- Nom des cocktails -->
+
+    <h2 id="templateNom" hidden>{{#tableCocktails}}{{nom}}{{/tableCocktails}}</h2>
+
+<!-- Liste des ingredients par cocktail -->
+    <ul id="templateListes" hidden>
+        {{#tableCompositions}}
+            <li>{{id_cocktails}}</li>
+        {{/tableCompositions}}
+    </ul>
+
+    </section>
+
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.hammer.js"></script>
+<script src="js/mustache.js"></script>
+<script src="js/data.js"></script>
+<script src="js/myjs.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,51 @@
+/* line 4, ../sass/screen_two.sass */
+#back {
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  left: 0;
+}
+
+/* line 13, ../sass/screen_two.sass */
+#screen_two ul {
+  margin-top: 40px;
+  padding: 0 25px;
+}
+/* line 16, ../sass/screen_two.sass */
+#screen_two li {
+  list-style: none;
+  background-color: #f5e3c2;
+  padding: 20px;
+  margin-top: 15px;
+}
+/* line 21, ../sass/screen_two.sass */
+#screen_two li h2 {
+  margin-top: 0;
+}
+/* line 23, ../sass/screen_two.sass */
+#screen_two article {
+  position: relative;
+}
+
+/* line 26, ../sass/screen_two.sass */
+.favoris-indication {
+  float: right;
+  margin: 5px;
+  background-color: red;
+  height: 10px;
+  width: 10px;
+  content: "";
+}
+
+/* line 35, ../sass/screen_two.sass */
+#screen_two .inline-list {
+  padding: 0;
+  margin: 0;
+}
+/* line 38, ../sass/screen_two.sass */
+#screen_two .inline-list > li {
+  display: inline-block;
+  padding: 0 5px;
+  margin: 0;
+  font-style: italic;
+}

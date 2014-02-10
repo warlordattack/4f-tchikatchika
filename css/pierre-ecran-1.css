@@ -1,0 +1,99 @@
+/* ----------------------------------------
+   Author
+------------------------------------------- */
+
+#contenu {
+    position: relative;
+}
+
+header {
+  height: 44px;
+  line-height: 44px;
+  background-color: #11a7ab;
+}
+
+.header-categorie {
+   text-align: center;
+  text-transform: uppercase;
+  padding: 0;
+  margin: 0;
+}
+
+.header-categorie li {
+    display: inline-block;
+    text-transform: uppercase;
+     text-align: center;
+}
+
+
+#slider {
+  width: 100%;
+  height: auto;
+  overflow-x: scroll;
+  overflow-y: hidden;
+    background-color: black;
+}
+
+.slide {
+    width: 1500px;
+    height: 100%;
+    margin: auto;
+    padding: 0;
+    list-style: none;
+}
+
+
+#drop {
+   max-width: 100%; 
+   min-height: 26.566%; 
+   height: 100%; 
+  border: 5px dotted #f8dc7e;
+  border-radius: 20px;
+  cursor: move;
+  overflow: hidden;
+}
+
+.slide-drop {
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    padding: 0;
+    list-style: none;
+}
+
+.slide-drop img {
+  max-height: 50%;
+  max-width: 50%;
+}
+
+.ingredients {
+    margin: 0;
+    padding: 5px;
+    float: left;
+}
+
+span img {
+  position: absolute;
+  z-index: 10;
+  /* bottom: -30px; */
+  top: 220px;
+  left: 25px;
+  width: 50px;
+  height: 80px;
+}
+
+#reload {
+/*  background: url(../img/poubelle.jpg) no-repeat;*/
+  margin: 10px;
+}
+
+#shake {
+/*    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;*/
+   width: 90%; 
+   margin: 2% 5%; 
+   padding: 13px; 
+   bottom: 20px; 
+}

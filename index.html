@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Tchika Tchika</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/pierre-ecran-1.css">
+    <link rel="stylesheet" href="css/pierre-footer.css">
+</head>
+<body>
+
+<!-- ECRAN UN DEBUT -->
+
+    <section class="screen" id="screen_one">
+
+        <header>
+            <ul class="header-categorie">
+                <li>Alcool</li>
+                <li>Soft</li>
+                <li>Aliments</li>
+            </ul>
+        </header>
+
+        <section id="contenu">
+            
+            <div id="slider">
+                <ul id="listeIngredients" class="slide">
+
+                </ul>
+            </div>
+   
+            <div id="drop">
+                <ul id="dropzone" class="slide-drop">
+
+                </ul>
+                
+            <button id="reload">reload</button>
+                
+            </div>
+   
+        <button id="shake">
+            SHAKE IT !
+        </button>
+   
+        </section>
+        
+   <!-- indication de dépot -->
+        <span>
+            <img src="img/fleche.png" class="dragndrop-icon"></i>
+        </span>
+   <!--/indication -->
+   
+<!-- CREATION TEMPLATE -->
+
+<!-- Liste des ingrédients envoi -->
+    <ul id="templateIngredients" hidden>
+        {{#table}}
+            <li id="style-drag"><img class="ingredients" data-id-ingredient="{{id_ingredients}}" src="img/{{id_ingredients}}.jpg" alt="{{libelle}}"></li>
+        {{/table}}
+    </ul>
+
+    </section>
+<!-- ECRAN UN FIN -->
+
+    
+<!-- ECRAN DEUX DEBUT--> 
+<section class="screen" id="screen_two" >
+<!-- bouton de retour -->
+        <button id="back">
+            <!-- <i class="icon-back"></i> -->Back
+        </button>
+
+        <ul>
+            <li>
+                <article>
+    <!-- titre -->
+                    <h2 id="nomCocktail">
+    <!-- insérer icone favoris -->
+                        <span class="favoris-indication"></span>
+    <!-- /icone favoris -->
+
+                    </h2>
+    <!-- liste ingredients -->
+                    <ul id="listeCompositions" class="inline-list">
+
+                    </ul>
+    <!-- /liste ingrédients -->
+
+    <!-- photo en bas de chaque article -->
+                    <figure>
+                        <!-- <img src="img/..." alt="" class="photo-cocktail-1"> -->
+                    </figure>
+                </article>
+            </li>
+<!-- / FIN DU PREMIER COCKTAIL -->
+        </ul>
+
+<!-- CREATION TEMPLATE -->
+
+<!-- Nom des cocktails -->
+
+    <h2 id="templateNom" hidden>{{#tableCocktails}}{{nom}}{{/tableCocktails}}</h2>
+
+<!-- Liste des ingredients par cocktail -->
+    <ul id="templateListes" hidden>
+        {{#tableCompositions}}
+            <li>{{id_cocktails}}</li>
+        {{/tableCompositions}}
+    </ul>
+
+    </section>
+<!-- ECRAN DEUX FIN -->
+
+<!-- ECRAN TROIS DEBUT -->
+
+<section class="screen" id="screen_three">
+<!-- image en haut de page -->
+        <figure>
+            <img src="img/1.jpg" alt="" class="photo-cocktail-1">
+
+<!-- bouton de favoris -->
+            <button id="fav-button">
+                <i class="icon-fav"></i>
+            </button>
+        </figure>
+
+<!-- bouton de retour -->
+        <button id="back-3-top">
+            <i class="icon-back">Back</i>
+        </button>
+
+        <article>
+    <!-- titre -->
+            <h1>
+                Titre du cocktail
+            </h1>
+
+    <!-- liste des ingredients -->
+            <ul class="inline-list">
+                <li>Liste des ingr&eacute;dients</li>
+                <li>Ingr&eacute;dient</li>
+                <li>Ingr&eacute;dient</li>
+                <li>Ingr&eacute;dient</li>
+                <li>Ingr&eacute;dient</li>
+                <li>Ingr&eacute;dient</li>
+            </ul>
+            <hr>
+
+    <!-- étapes de préparation -->
+            <ul>
+                <li>Mixe le citron dans le jus de pneu</li>
+                <li>Touille fort avec un ane baté</li>
+                <li>Gratte la fourchette sans frotter la molette</li>
+                <li>Insere le sentiment dans la saucisse</li>
+                <li>Amen, Pater, Av&eacute; Marion</li>
+                <li>Ingr&eacute;dient</li>
+            </ul>
+
+    <!-- texte de description du cocktail -->
+            <p>Ici le texte optionnel pour décrire le cocktail, consectetur adipisicing elit. Assumenda, voluptatibus, est quia saepe enim suscipit eaque incidunt dolores voluptates optio consequatur soluta quis nesciunt modi reprehenderit natus tempora ratione expedita.
+            </p>
+            <hr>
+            <p><em>"Ici le mot du barman optionnel pour décrire le cocktail, consectetur adipisicing elit. Assumenda, voluptatibus.
+            "</em></p>
+        </article>
+
+<!-- bouton de retour à la liste -->
+        <button id="back-3-bottom">
+            <i class="icon-arrow-back">Retour</i>
+        </button>
+    </section>
+<!-- ECRAN TROIS FIN -->
+
+<footer>
+    <nav>
+        <ul>
+            <li><a id="menu-shake" class="active menu-bouton" href="#screen_one">Shake</a></li>
+            <li><a id="menu-liste" class="menu-bouton" href="#screen_two">Liste</a></li>
+            <li><a id="menu-fiche" class="menu-bouton" href="#screen_three">Fiche</a></li>
+        </ul>
+    </nav>
+</footer>
+
+<!-- ici les autres écrans -->
+<!-- Scripts -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery.hammer.js"></script>
+    <script src="js/mustache.js"></script>
+    <script src="js/data.js"></script>
+    <script src="js/myjs.js"></script>
+</body>
+</html>
