@@ -24,7 +24,7 @@ fxListeIngredients = function() {
     $('#listeIngredients').append(tIHtml);    
 };
 
-// Gestion du click sur ingrédient
+// Gestion du click sur ingrédients
 fxClickZoneDrag = function() {
     $(document).on("click", "#style-drag", function() {
 
